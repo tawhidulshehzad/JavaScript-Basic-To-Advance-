@@ -13,10 +13,10 @@ for (let i = 1; i <= n; i++) {
 }
 console.log(string);
 
-/* *
- **
- ***
- ****
+/* pretter ignore   *
+    **
+   ***
+  ****
  ***** */
 
 let n2 = 5;
@@ -27,10 +27,20 @@ for (let i = 1; i <= n2; i++) {
   }
   eString += "\n";
 }
-console.log(eString);
+// console.log(eString);
 
 /* *
  **
  ***
  ****
  ***** */
+
+let num = "";
+
+for (let i = 1; i <= 10; i++) {
+  for (let j = 0; j < i; j++) {
+    num += "*";
+  }
+  num += "\n";
+}
+// console.log(num);
