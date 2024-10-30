@@ -18,3 +18,19 @@ console.log(string);
  ***
  ****
  ***** */
+
+let n2 = 5;
+let eString = "";
+for (let i = 1; i <= n2; i++) {
+  for (let j = 0; j < i; j++) {
+    eString += "*";
+  }
+  eString += "\n";
+}
+console.log(eString);
+
+/* *
+ **
+ ***
+ ****
+ ***** */
