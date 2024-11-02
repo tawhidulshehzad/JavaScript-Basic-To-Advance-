@@ -1,2 +1,9 @@
-Object.defineProperty(subject, "birth year", { value: "2008" });
-// console.log(subject);
+if (
+  //   "a" === char ||
+  //   "e" === char ||
+  //   "i" === char ||
+  //   "o" === char ||
+  //   "u" === char
+  // ) {
+  //   counter += 1;
+  // }
