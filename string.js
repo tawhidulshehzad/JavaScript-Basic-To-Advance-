@@ -8,4 +8,7 @@ let address02 = "";
 for (let i = 0; i < address.length; i++) {
   address02 = address[i] + address02;
 }
-console.log(address02);
+// console.log(address02);
+
+const reversed = address.split("").reverse().join("");
+console.log(reversed);
