@@ -8,4 +8,7 @@ let finalStr = [];
 for (const word of splitStr) {
   finalStr.unshift(word);
 }
-console.log(finalStr.join(" "));
+const joinedStr = finalStr.join(" ");
+let result = joinedStr[0].toUpperCase() + joinedStr.slice(1);
+
+console.log(result);
