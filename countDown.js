@@ -1,16 +1,15 @@
-const timer = (time) => {
-  return new Promise((resolve) => setTimeout(resolve, time));
-};
+function countdown() {
+  let count = 5;
+  
+  const intervalId = setInterval(() => {
+      console.log(count);
+      count--;
 
-const foo = async (time, count) => {
-  for (let i = 0; i < count; i++) {
-    await timer(time);
-    console.log(`${i}`);
-  }
-};
+      if (count < 0) {
+          clearInterval(intervalId);
+          console.log("Countdown finished!");
+      }
+  }, 500);
+}
 
-//execute every 2 sec
-let time = 1000;
-let count = 5;
-
-foo(time, count);
+countdown();
