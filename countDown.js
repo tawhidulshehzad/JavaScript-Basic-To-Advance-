@@ -1,14 +1,14 @@
 function countdown() {
-  let count = 5;
-  
-  const intervalId = setInterval(() => {
-      console.log(count);
-      count--;
+  let count = 3;
 
-      if (count < 0) {
-          clearInterval(intervalId);
-          console.log("Countdown finished!");
-      }
+  const intervalId = setInterval(() => {
+    console.log(count);
+    count--;
+
+    if (count < 0) {
+      clearInterval(intervalId);
+      console.log("Countdown finished!");
+    }
   }, 500);
 }
 
