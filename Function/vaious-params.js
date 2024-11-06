@@ -14,3 +14,13 @@ function countZero(binaryString) {
 
 const binaryStr = "2132";
 console.log(countZero(binaryStr));
+
+const obj = {
+  name: "tawhidul",
+  greet() {
+    console.log(`Hello, ${this.name}`);
+  },
+};
+obj.greet(); // "Hello, tawhidul"
+
+
