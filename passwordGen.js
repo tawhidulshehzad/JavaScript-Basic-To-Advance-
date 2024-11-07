@@ -1,38 +1,34 @@
-// program to generate random strings
+function generatePassword(length) {
+  const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+  const numbers = "0123456789";
+  const symbols = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
 
-// declare all characters
-const characters =
-  "A1BCDE2FGH3IJ4KLM5NOP6QRS7TUVW8XYZabc9defghijklmnopqrstuvwxyz~!@#$%^&*()_+|}{:/";
+  // Combine all characters
+  const allCharacters = upperCase + lowerCase + numbers + symbols;
 
-function generateString() {
-  let result = "";
-  const charactersLength = characters.length;
+  let password = "";
 
-  for (let i = 1; i < charactersLength; i++) {
-    result =
-      result + characters.charAt(Math.floor(Math.random() * charactersLength));
+  // Ensure password contains at least one of each type
+  password += upperCase[Math.floor(Math.random() * upperCase.length)];
+  password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+  password += numbers[Math.floor(Math.random() * numbers.length)];
+  password += symbols[Math.floor(Math.random() * symbols.length)];
+
+  // Generate the rest of the password
+  for (let i = 4; i < length; i++) {
+    password += allCharacters[Math.floor(Math.random() * allCharacters.length)];
   }
 
-  return result;
+  // Shuffle the password to randomize character order
+  password = password
+    .split("")
+    .sort(() => Math.random() - 0.5)
+    .join("");
+
+  return password;
 }
 
-const getTheStr = generateString();
-// We got the string
+// Example usage
+console.log(generatePassword(5));
 
-const removeCharacter = (inputData) => {
-  let output = "";
-  let lastChar = "";
-
-  for (const letter of inputData) {
-    if (letter !== lastChar) {
-      output += letter;
-      lastChar = letter;
-    }
-  }
-
-  return output;
-};
-
-const testString = getTheStr;
-const withOutRepeatChar = removeCharacter(testString);
-console.log(withOutRepeatChar.slice(0, 10));
