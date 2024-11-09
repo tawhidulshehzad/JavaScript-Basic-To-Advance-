@@ -13,3 +13,4 @@ function vowelCountInAstr(str) {
 }
 const giveStr = "I am a good eman";
 console.log(vowelCountInAstr(giveStr));
+
