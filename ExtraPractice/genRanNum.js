@@ -13,12 +13,4 @@ function longestWord(str) {
 
 console.log(longestWord("I am a Learner"));
 
-const users = [
-  { firstName: "shamim", lastName: "hasan", age: 30 },
-  { firstName: "rakib", lastName: "ahmed", age: 25 },
-  { firstName: "akib", lastName: "khan", age: 22 },
-];
-const fullNames = users.map(
-  ({ firstName, lastName }) => `${firstName} ${lastName}`
-);
-console.log(fullNames); 
+
