@@ -1,12 +1,14 @@
-const fruits = ["apple", "orange", "watermalone", "mango000"];
-// console.log(indexOf("apple"));
-function getThelongestString(arr) {
-  let longestStr = [];
+function getTheLongestString(arr) {
+  let longestStr = arr[0];
+
   for (const element of arr) {
-    longestStr.push(element.length);
+    if (element.length > longestStr.length) {
+      longestStr = element;
+    }
   }
-  const bigestLength = Math.max(...longestStr);
-  const indexOfLongest = longestStr.indexOf(bigestLength);
-  console.log("Longest String: ", arr[indexOfLongest]);
+
+  console.log("Longest String:", longestStr);
 }
-getThelongestString(fruits);
+
+const fruits = ["apple", "orange", "watermelon", "mango000"];
+// getTheLongestString(fruits); // Output: "watermelon"
