@@ -1,17 +1,12 @@
 function hasPairWithSum(arr, sum) {
-  const seen = new Set();
-
-  for (let num of arr) {
-    const complement = sum - num;
-
-    if (seen.has(complement)) {
-      return true; // Found a pair
+  let len = arr.length;
+  for (let i = 0; i < len - 1; i++) {
+    for (let j = i + 1; j < len; j++) {
+      if (arr[i] + arr[j] === sum) {
+        return true;
+      }
     }
-
-    seen.add(num); // Store the number in the Hash Set
   }
-
-  return false; // No pair found
+  return false;
 }
-
-console.log(hasPairWithSum([9, 5, 7, 8, 1], 9)); // true
+console.log(hasPairWithSum([1, 2, 7, 8, 9], 9));
