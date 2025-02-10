@@ -12,4 +12,12 @@ const printAllNumber = (numbers) => {
   });
 };
 
-printAllNumber(numbers);
+// printAllNumber(numbers);
+
+function searchWithSet(arr, target) {
+  let set = new Set(arr); // Convert array to a set
+  return set.has(target);
+}
+
+console.log(searchWithSet([10, 20, 30, 40], 30)); // true
+console.log(searchWithSet([10, 20, 30, 40], 50)); // false
