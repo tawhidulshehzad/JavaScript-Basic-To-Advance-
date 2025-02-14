@@ -11,14 +11,17 @@ const array02 = ["g", "h", "i", "j", "k", "l"];
 //   }
 //   return false;
 // }
+// function matchTheArray(array01, array02) {
+//   const set = new Set(array01);
+//   for (const item of array02) {
+//     if (set.has(item)) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
 function matchTheArray(array01, array02) {
-  const set = new Set(array01);
-  for (const item of array02) {
-    if (set.has(item)) {
-      return true;
-    }
-  }
-  return false;
+  return array01.some((item) => array02.includes(item));
 }
 
 const getTheArray = matchTheArray(array01, array02);
